@@ -1,6 +1,7 @@
 :root {
   --primary: #032A38;
   --white: #F7F5EB;
+  --transparent: #F7F5EB15;
 
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -23,9 +24,6 @@ a:hover {
 body {
   color: var(--white);
   background-color: var(--primary);
-  margin: 0;
-  /* display: flex; */
-  /* place-items: center; */
   min-width: 320px;
   min-height: 100vh;
 }

@@ -1,5 +1,16 @@
+
+@font-face {
+  font-family: 'Calculator-big';
+  src: url('./assets/Segment7-4Gml.otf');
+}
+
+@font-face {
+  font-family: 'Calculator-small';
+  src: url('./assets/Calculator.woff');
+}
+
+/* navigation styling */
 nav {
-  /* background-color: red; */
   border-bottom: 2px solid #fefefe76;
   border-radius: 10px;
   width: 80%;
@@ -29,7 +40,83 @@ nav a {
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
+/* about styling */
+.about-container {
+  align-items: center;
+  background-color: var(--transparent);
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 800px;
+  margin: 20px auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.about-image {
+  float: left;
+  width: 150px;
+  height: auto;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  margin-right: 20px;
+}
+.about-content {
+  text-align: left;
+  width: 100%;
+}
+.drop-cap {
+  font-size: 4em;
+  float: left;
+  margin-right: 10px;
+  line-height: 1;
+}
+p {
+  margin: 10px 0;
+  /* overflow: hidden; */
+}
+
+/* countdown styles */
+.countdown-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 50px auto;
+  padding: 10px;
+  /* background-color: var(--transparent); */
+  border-radius: 10px;
+  flex-wrap: wrap;
+  max-width: 40%;
+}
+
+/* timer styles */
+.time-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--white);
+  padding: 5px;
+  border-radius: 5px;
+  transition: color 0.5s ease-in-out;
+  margin: 5px;
+  width: 60px;
+  max-width: 100%;
+}
+.time-value {
+  font-size: 2em;
+  font-weight: bold;
+  transition: transform 0.5s ease-in-out;
+  font-family: 'Calculator-big', sans-serif;
+}
+.time-label {
+  font-size: 1em;
+  /* margin-top: 5px; */
+  font-family: 'Calculator-small', sans-serif;
+}
+@keyframes changeColor {
+  0% {color: red;}
+  100% {color: green;}
+}
+
 @media (max-width: 600px) {
+  /* navigation styling */
   nav {
     margin: 0;
     width: 100%;
@@ -62,4 +149,30 @@ nav a {
   .hamburger.active div:nth-child(3) {
     transform: translateY(-12px) rotate(-45deg);
   }
+
+  /* about styling */
+  .about-container {
+    padding: 30px;
+  }
+  .about-content {
+    max-width: 700px;
+  }
+
+  /* countdown styles */
+  .countdown-container {
+    max-width: 100%;
+    /* flex-direction: column; */
+  }
+}
+
+/* accessibility styles */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
 }
